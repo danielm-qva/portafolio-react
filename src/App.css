@@ -1,0 +1,42 @@
+
+.context-home{
+    background-color:#fff ;
+    width: 100%;
+    height: min-content;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 12px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+/* .icon {
+    text-decoration: none;
+    min-width: 50px;
+    min-height: 50px;
+} */
+
+.context-home h1 {
+    display: block;
+    font-size: 24px ;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid ;
+    width: 13ch; 
+    animation: typing 2s steps(8) , blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+.context-home h2 {
+    display: block;
+    font-size: 24px ;
+    font-family: monospace;
+    white-space: nowrap;
+    
+}
+
+
+@keyframes  typing {
+    from { width: 0}
+}
+@keyframes blink {
+  50% {border-color: transparent;}
+}
