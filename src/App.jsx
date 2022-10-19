@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBarApp from './component/navbar/NavBarApp'
 
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import {BrowserRouter,Routes, Route } from 'react-router-dom'
 
 import "./App.css"
 import { Col, Container, Row, Stack  } from 'react-bootstrap'
@@ -17,7 +17,6 @@ import About from './component/About/About'
 import {useSelector} from 'react-redux'
 import Footer from './component/footer/Footer'
 
-
 export default function App() {
 
   const {statusLogin} = useSelector((state) => state.loginApp)
@@ -30,9 +29,9 @@ export default function App() {
            <Col xs={12}  md={8}  >
           <BrowserRouter>
           <Routes>
+            <Route path='/' element={<Home/>}/>
             <Route path='/home' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
-            <Route path='/work' element={<h1>Estoy en Work</h1>}/>
           </Routes>
           </BrowserRouter>
            </Col>
@@ -43,13 +42,13 @@ export default function App() {
                   }
                   {
                      !statusLogin ? <Register/> : <Chat/>
-                   
+
                   }
                 </Stack>
            </Col>
           </Row>
           </Container>
           <Footer/>
-     </>    
+     </>
   )
 }
