@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBarApp from './component/navbar/NavBarApp'
 
-import {BrowserRouter,Routes, Route } from 'react-router-dom'
+import {Routes, Route  } from 'react-router-dom'
 
 import "./App.css"
 import { Col, Container, Row, Stack  } from 'react-bootstrap'
@@ -27,13 +27,11 @@ export default function App() {
         <Container fluid className='mt-5 p-5' >
           <Row>
            <Col xs={12}  md={8}  >
-          <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/home' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
           </Routes>
-          </BrowserRouter>
            </Col>
            <Col xs={6} md={4}>
                 <Stack gap={2} className="col-lg-12 mx-auto">
